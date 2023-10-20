@@ -21,7 +21,7 @@ const LoginForm = () => {
       navigate('/main');
     }
   };
-  console.log('sd')
+
   return (
     <section className="section section-login">
       <div className="container">
