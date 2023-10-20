@@ -10,7 +10,7 @@ const ModalCreatePost = ({ onSubmit, onClose }) => {
     onSubmit({ title, body });
     setTitle("");
     setBody("");
-    onClose(); // Закриття модального вікна після подачі форми
+    onClose();
   };
 
   return (

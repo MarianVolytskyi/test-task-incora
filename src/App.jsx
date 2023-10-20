@@ -4,11 +4,12 @@ import LoginForm from './components/LoginForm';
 import MainPage from './components/MainPage';
 
 function App() {
+  console.log('app')
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<LoginForm />} />
+          <Route index element={<LoginForm />} />
           <Route path="/main" element={<MainPage />} />
         </Routes>
       </div>

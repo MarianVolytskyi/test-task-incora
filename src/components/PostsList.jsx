@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { deletePosts } from "../api/api";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const PostsList = ({ posts, onSelect, onDelete }) => {
   const [viewAll, setViewAll] = useState(false);
@@ -9,6 +11,7 @@ export const PostsList = ({ posts, onSelect, onDelete }) => {
     const updatedPosts = posts.filter((post) => post.id !== postToDelete.id);
 
     onDelete(updatedPosts);
+    toast.error('Пост був успішно видалений!', { autoClose: 1000,  position: toast.POSITION.TOP_CENTER,});
     return deletePosts(postToDelete.id);
   };
 
@@ -23,7 +26,7 @@ export const PostsList = ({ posts, onSelect, onDelete }) => {
               <div className="media-content">
                 <div className="content">
                   <p>
-                    <strong>{post.title}</strong>
+                    <strong>{post.title.toUpperCase()}</strong>
                     <br />
                     {post.body}
                   </p>

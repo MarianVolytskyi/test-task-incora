@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import PostDetails from "./PostDetails";
 import { v4 as uuidv4 } from "uuid";
 import ModalCreatePost from "./ModalCreatePost";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function generateNumericId() {
   const uuid = uuidv4();
@@ -22,7 +24,7 @@ const MainPage = () => {
   const [createForm, setCreateForm] = useState(false);
 
   const handleLogout = () => {
-    // Add your logout logic here
+
     navigate("/");
   };
 
@@ -41,16 +43,18 @@ const MainPage = () => {
       title,
       body,
     };
-
+    toast.success('Пост був успішно доданий!', { autoClose: 2000, position: toast.POSITION.TOP_CENTER });
     setPosts((curPost) => [newPost, ...curPost]);
 
     createPosts(newPost);
+   
   };
 
   return (
     <section className="section ">
       <div className="container is-flex is-justify-content-space-between">
-        <h2 className="title is-size-1 is-flex 	"> NEWS TIME</h2>
+      <h2 className="title is-size-1 is-flex" style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'black', letterSpacing: '5px' }}>NEWS TIME</h2>
+
         <button className="button is-danger mt-2" onClick={handleLogout}>
           Logout
         </button>

@@ -17,13 +17,11 @@ const LoginForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
-      // Add your authentication logic here
 
-      // Redirect to the main page
       navigate('/main');
     }
   };
-
+  console.log('sd')
   return (
     <section className="section section-login">
       <div className="container">
