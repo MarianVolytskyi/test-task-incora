@@ -13,5 +13,4 @@ export const getAlbums = () => api.get("/albums");
 export const getUsersPosts = (userId) => api.get(`/users/${userId}/posts`);
 export const getPostComment = (postId) => api.get(`/posts/${postId}/comments`);
 export const getUsersAlbum = (userId) => api.get(`/users/${userId}/albums`);
-export const getAlbumsPhotos = (albumId) =>
-  api.get(`/albums/${albumId}/photos`);
+export const getAlbumsPhotos = (albumId) => api.get(`/albums/${albumId}/photos`);

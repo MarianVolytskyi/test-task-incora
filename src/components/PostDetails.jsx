@@ -33,7 +33,7 @@ const PostDetails = ({ selectedPost, closeModal }) => {
               <strong>Comments</strong>
             </h2>
           ) : (
-            <h2 className="subtitle is-3">             
+            <h2 className="subtitle is-3">
               <strong>No comments yet</strong>
             </h2>
           )}

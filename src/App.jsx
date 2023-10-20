@@ -1,12 +1,11 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
-import MainPage from './components/MainPage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginForm from "./components/LoginForm";
+import MainPage from "./components/MainPage";
 
 function App() {
-  console.log('app')
+  console.log("app");
   return (
-    <Router>
+    <Router basename={"/test-task-incora"}>
       <div className="App">
         <Routes>
           <Route index element={<LoginForm />} />
