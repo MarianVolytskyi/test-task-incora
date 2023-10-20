@@ -1,2 +1,2 @@
-[DEMO] (https://marianvolytskyi.github.io/test-task-incora)
+[DEMO](https://marianvolytskyi.github.io/test-task-incora)
 
